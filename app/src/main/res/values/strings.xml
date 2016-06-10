@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Block This!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="like_this_app">Like this app?</string>
+    <string name="home_button_rate">Rate the app!</string>
+    <string name="home_button_continue">Cool, lets get started.</string>
+    <string name="home_give_back">Now you give only it\'s worth to you.</string>
+    <string name="powered_by">Powered by block-this.com</string>
+
+    <string name="additional_info"></string>
+    <string name="title_activity_blank_activiy">BlankActiviy</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="feel_freedom">and feel the freedom.</string>
+
+    <string name="feature_1_title">No Ads</string>
+    <string name="feature_1_subtitle">Banners, video and audio ads.</string>
+    <string name="feature_2_title">No Tracking</string>
+    <string name="feature_2_subtitle">Block tracking cookies.</string>
+    <string name="feature_3_title">Faster Browsing</string>
+    <string name="feature_3_subtitle">30% less data consumption.</string>
+    <string name="feature_5_title">Antivirus protection</string>
+    <string name="feature_5_subtitle">Block malware and virus downloads.</string>
+    <string name="feature_4_title">Autostart</string>
+    <string name="feature_4_subtitle">Automatically start up on boot.</string>
+    <string name="feature_6_title">Battery life</string>
+    <string name="feature_6_subtitle">Increased battery life.</string>
+    <string name="title_activity_auto_launch">AutoLaunchActivity</string>
+    <string name="title_activity_donate">DonateActivity</string>
+
+    <string name="title">We need your support!</string>
+    <string name="paragraph1">If you share my vision and wish this app to remain free for everyone, please consider supporting it via one of the following methods.</string>
+    <string name="patrion">1. Become a patron.</string>
+    <string name="paragraph2">The best way you can help, and get rewards doing so, is by becoming a patron.</string>
+    <string name="donate_patrion">Become a Patron and get rewards.</string>
+    <string name="paypal">2. Contribute via PayPal</string>
+    <string name="paragraph3">Alternatively, you can help by donating via PayPal.</string>
+    <string name="donate_paypal">Donate via PayPal.</string>
+</resources>
