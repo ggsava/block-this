@@ -25,4 +25,9 @@
         <item>@color/yellow</item>
         <item>@color/white</item>
     </integer-array>
-</resources> 
+
+    <!--todo pick an accent color. Or not.-->
+    <color name="colorPrimary">#c55b5b</color>
+    <color name="colorPrimaryDark">#9D4747</color>
+    <color name="colorAccent">#c55b5b</color>
+</resources>
