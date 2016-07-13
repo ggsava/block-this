@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,45 +16,45 @@
             android:src="@drawable/smaller_size_girl"/>
 
         <ScrollView
+            android:id="@+id/scrollView3"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/scrollView3"
             android:background="#26000000">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                >
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="10dp"
-                    android:background="#D9FFFFFF"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#D9FFFFFF"
+                    android:orientation="vertical"
                     android:padding="10dp">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Block This! 2.0 now FREE!"
                         android:id="@+id/text_thanks_premium"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:layout_gravity="center"
-                        android:textColor="@color/green"/>
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_give_back"
-                        android:id="@+id/text_upgrade_now"
-                        android:textSize="18sp"
                         android:layout_gravity="center"
+                        android:text="Block This! 2.0 now FREE!"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/green"/>
+
+                    <TextView
+                        android:id="@+id/text_upgrade_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/home_give_back"
                         android:textColor="@color/orange"
+                        android:textSize="18sp"
                         android:textStyle="bold"/>
                 </LinearLayout>
-
 
 
                 <RelativeLayout
@@ -66,328 +66,340 @@
 
 
                     <TextView
+                        android:id="@+id/home_text_pro"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="FREE"
-                        android:id="@+id/home_text_pro"
                         android:layout_alignParentRight="true"
+                        android:background="#D9FFFFFF"
+                        android:paddingBottom="5dp"
                         android:paddingLeft="10dp"
                         android:paddingRight="20dp"
                         android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
-                        android:textStyle="bold"
+                        android:text="FREE"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@color/orange"
-                        android:background="#D9FFFFFF"/>
+                        android:textStyle="bold"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:orientation="horizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:background="#D9FFFFFF"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="10dp"
+                    android:background="#D9FFFFFF"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_1_image"
-                        android:src="@drawable/stop"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
                         android:paddingLeft="5dp"
-                        android:paddingRight="10dp" />
+                        android:paddingRight="10dp"
+                        android:src="@drawable/stop"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/feature_1_title"
                         android:id="@+id/feature_1_title"
-                        android:layout_toRightOf="@+id/feature_1_image"/>
-
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="@string/feature_1_subtitle"
+                        android:layout_toRightOf="@+id/feature_1_image"
+                        android:text="@string/feature_1_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#444"/>
+
+                    <TextView
                         android:id="@+id/feature_1_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/feature_1_title"
-                        android:layout_toRightOf="@id/feature_1_image"/>
-
+                        android:layout_toRightOf="@id/feature_1_image"
+                        android:text="@string/feature_1_subtitle"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#444"/>
 
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_1_tick_pro"
-                        android:src="@drawable/accept_green"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
                         android:paddingLeft="10dp"
                         android:paddingRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:src="@drawable/accept_green"
                         />
                 </RelativeLayout>
 
                 <RelativeLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"
-                android:background="#D9FFFFFF"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#D9FFFFFF"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_2_image"
-                        android:src="@drawable/lock"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="10dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/feature_2_title"
-                    android:id="@+id/feature_2_title"
-                    android:layout_toRightOf="@+id/feature_2_image"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/feature_2_subtitle"
-                    android:id="@+id/feature_2_subtitle"
-                    android:layout_below="@+id/feature_2_title"
-                    android:layout_toRightOf="@id/feature_2_image"/>
-
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="40dp"
-                    android:id="@+id/feature_2_tick_pro"
-                    android:src="@drawable/accept_green"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="15dp"
-                    android:layout_alignParentRight="true"
-                    />
-            </RelativeLayout>
-
-                <RelativeLayout
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:layout_marginTop="5dp"
-                    android:background="#D9FFFFFF"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
-
-                    <ImageView
                         android:layout_width="50dp"
                         android:layout_height="40dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/lock"/>
+
+                    <TextView
+                        android:id="@+id/feature_2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/feature_2_image"
+                        android:text="@string/feature_2_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#444"/>
+
+                    <TextView
+                        android:id="@+id/feature_2_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/feature_2_title"
+                        android:layout_toRightOf="@id/feature_2_image"
+                        android:text="@string/feature_2_subtitle"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#444"/>
+
+
+                    <ImageView
+                        android:id="@+id/feature_2_tick_pro"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="15dp"
+                        android:src="@drawable/accept_green"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#D9FFFFFF"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
                         android:id="@+id/feature_5_image"
-                        android:src="@drawable/shield"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
                         android:paddingLeft="5dp"
-                        android:paddingRight="10dp" />
+                        android:paddingRight="10dp"
+                        android:src="@drawable/shield"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/feature_5_title"
                         android:id="@+id/feature_5_title"
-                        android:layout_toRightOf="@+id/feature_5_image"/>
-
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="@string/feature_5_subtitle"
+                        android:layout_toRightOf="@+id/feature_5_image"
+                        android:text="@string/feature_5_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#444"/>
+
+                    <TextView
                         android:id="@+id/feature_5_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/feature_5_title"
-                        android:layout_toRightOf="@id/feature_5_image"/>
+                        android:layout_toRightOf="@id/feature_5_image"
+                        android:text="@string/feature_5_subtitle"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#444"/>
 
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_5_tick_pro"
-                        android:src="@drawable/accept_green"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
                         android:paddingLeft="10dp"
                         android:paddingRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:src="@drawable/accept_green"
                         />
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:orientation="horizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:background="#D9FFFFFF"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_3_image"
-                        android:src="@drawable/arrow_up"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
                         android:paddingLeft="5dp"
-                        android:paddingRight="10dp" />
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_up"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/feature_3_title"
                         android:id="@+id/feature_3_title"
-                        android:layout_toRightOf="@+id/feature_3_image"/>
-
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="@string/feature_3_subtitle"
+                        android:layout_toRightOf="@+id/feature_3_image"
+                        android:text="@string/feature_3_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#444"/>
+
+                    <TextView
                         android:id="@+id/feature_3_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/feature_3_title"
-                        android:layout_toRightOf="@id/feature_3_image"/>
+                        android:layout_toRightOf="@id/feature_3_image"
+                        android:text="@string/feature_3_subtitle"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#444"/>
 
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_3_tick_pro"
-                        android:src="@drawable/accept_green"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
                         android:paddingLeft="10dp"
                         android:paddingRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:src="@drawable/accept_green"
                         />
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:orientation="horizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:background="#D9FFFFFF"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_6_image"
-                        android:src="@drawable/clock"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
                         android:paddingLeft="5dp"
-                        android:paddingRight="10dp" />
+                        android:paddingRight="10dp"
+                        android:src="@drawable/clock"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/feature_6_title"
                         android:id="@+id/feature_6_title"
-                        android:layout_toRightOf="@+id/feature_6_image"/>
-
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="@string/feature_6_subtitle"
+                        android:layout_toRightOf="@+id/feature_6_image"
+                        android:text="@string/feature_6_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#444"/>
+
+                    <TextView
                         android:id="@+id/feature_6_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/feature_6_title"
-                        android:layout_toRightOf="@id/feature_6_image"/>
+                        android:layout_toRightOf="@id/feature_6_image"
+                        android:text="@string/feature_6_subtitle"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#444"/>
 
 
                     <ImageView
+                        android:id="@+id/feature_6_tick_pro"
                         android:layout_width="50dp"
                         android:layout_height="40dp"
-                        android:id="@+id/feature_6_tick_pro"
-                        android:src="@drawable/accept_green"
+                        android:layout_alignParentRight="true"
                         android:paddingLeft="10dp"
                         android:paddingRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:src="@drawable/accept_green"
                         />
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:orientation="horizontal"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:background="#D9FFFFFF"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
                         android:id="@+id/feature_4_image"
-                        android:src="@drawable/plugin"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
                         android:paddingLeft="5dp"
-                        android:paddingRight="10dp" />
+                        android:paddingRight="10dp"
+                        android:src="@drawable/plugin"/>
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/feature_4_title"
                         android:id="@+id/feature_4_title"
-                        android:layout_toRightOf="@+id/feature_4_image"/>
-
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="@string/feature_4_subtitle"
+                        android:layout_toRightOf="@+id/feature_4_image"
+                        android:text="@string/feature_4_title"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#444"/>
+
+                    <TextView
                         android:id="@+id/feature_4_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/feature_4_title"
-                        android:layout_toRightOf="@id/feature_4_image"/>
+                        android:layout_toRightOf="@id/feature_4_image"
+                        android:text="@string/feature_4_subtitle"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#444"/>
 
 
                     <ImageView
+                        android:id="@+id/feature_4_tick_pro"
                         android:layout_width="50dp"
                         android:layout_height="40dp"
-                        android:id="@+id/feature_4_tick_pro"
-                        android:src="@drawable/accept_green"
+                        android:layout_alignParentRight="true"
                         android:paddingLeft="10dp"
                         android:paddingRight="15dp"
-                        android:layout_alignParentRight="true"
+                        android:src="@drawable/accept_green"
                         />
                 </RelativeLayout>
 
 
                 <RelativeLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingBottom="20dp">
+                    android:paddingRight="10dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="30dp">
 
                         <Button
+                            android:id="@+id/button6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/home_button_continue"
-                            android:id="@+id/button6"
+                            android:layout_weight="1"
                             android:background="@drawable/full_background_blue"
+                            android:onClick="onLetMeTryItClicked"
+                            android:text="@string/home_button_continue"
                             android:textColor="#FFFFFF"
                             android:textStyle="bold"
-                            android:onClick="onLetMeTryItClicked"
-                            android:layout_weight="1"
                             />
                     </LinearLayout>
 

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/drawer_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:fab="http://schemas.android.com/apk/android.support.design.widget"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="?colorPrimary"
+        app:title="Block This"/>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button33"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:fontFamily="sans-serif-light"
+        android:switchPadding="8dp"
+        android:text="Start on boot"/>
+
+
+    <!--todo put this into toolbar    <Button
+            android:id="@+id/button_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnHelp"
+            android:padding="10dp"
+            android:text="Contact"
+            />-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button3"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="18dp"
+        android:onClick="connect"
+        android:src="@drawable/ic_play_arrow_white_48dp"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimary"
+        fab:fab_colorRipple="#eee"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button4"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="18dp"
+        android:onClick="disconnect"
+        android:src="@drawable/ic_stop_white_48dp"
+        android:visibility="gone"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimary"
+        fab:fab_colorRipple="#eee"/>
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/feel_freedom"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Block This started. Enjoy."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vote_for_app"
+        android:onClick="startDialog"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/present1"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="Touch to get the top daily free app."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_btm1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:autoLink="web"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:linksClickable="true"
+        android:text="We need your support for this app to remain FREE. \nBlock-This.com"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColorLink="?colorPrimaryDark"/>
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_btm1"
+        android:layout_centerHorizontal="true"
+        android:onClick="donate"
+        android:text="I want to help!"/>
+
+
+    <Button
+        android:id="@+id/vote_for_app"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:onClick="btnRateAppOnClick"
+        android:text="Rate us on Google Play"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

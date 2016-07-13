@@ -1,7 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.savageorgiev.blockthis.BlankActiviy">
-    <!-- Search, should appear as action button -->
-
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.savageorgiev.blockthis.BlankActiviy">
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/ic_info_outline_white_36dp"
+        android:orderInCategory="100"
+        android:title="About"
+        app:showAsAction="ifRoom"/>
 </menu>

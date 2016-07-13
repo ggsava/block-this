@@ -1,11 +1,11 @@
 package com.savageorgiev.blockthis;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
@@ -14,14 +14,16 @@ import android.net.Uri;
 import android.net.VpnService;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.crashlytics.android.answers.Answers;
 import com.crashlytics.android.answers.ContentViewEvent;
@@ -30,8 +32,11 @@ import com.savageorgiev.blockthis.MainVpnService.MyLocalBinder;
 import com.savageorgiev.blockthis.receivers.VpnStatusReceiver;
 import com.winsontan520.wversionmanager.library.WVersionManager;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-public class HomeActivity extends Activity {
+
+public class HomeActivity extends AppCompatActivity {
 
     private static final String TAG = "HomeActivity";
 
@@ -40,10 +45,18 @@ public class HomeActivity extends Activity {
 
     private SharedPreferences prefs;
 
-    private View connectBtn;
-    private View disconnectBtn;
-    private TextView textUnderBtn;
-    private TextView textConnectedBtn;
+    @BindView(R.id.button3)
+    FloatingActionButton connectBtn;
+    @BindView(R.id.button4)
+    View disconnectBtn;
+    @BindView(R.id.textView5)
+    TextView textUnderBtn;
+    @BindView(R.id.textView6)
+    TextView textConnectedBtn;
+    @BindView(R.id.switch1)
+    Switch mySwitch;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     /**
      * Called when the activity is first created.
@@ -52,20 +65,9 @@ public class HomeActivity extends Activity {
     private IntentFilter filter;
 
     @Override
-    public void onBackPressed() {
-            Intent intent = new Intent(this, TeaserActivity.class);
-            Bundle b = new Bundle();
-            b.putInt("reload", 1);
-            intent.putExtras(b);
-            startActivity(intent);
-            finish();
-            return;
-    }
-
-    @Override
     protected void onPause() {
         super.onPause();
-        if (isBound){
+        if (isBound) {
             this.unbindService(mainConnection);
             isBound = false;
         }
@@ -75,8 +77,6 @@ public class HomeActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-
-
         if (MainVpnService.isRunning && !isBound) {
             Log.i(TAG, "true");
             this.bindService(new Intent(this, MainVpnService.class), mainConnection, Context.BIND_AUTO_CREATE);
@@ -87,13 +87,12 @@ public class HomeActivity extends Activity {
         registerReceiver(vpnStatusReceiver, filter);
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blank_activiy);
-
+        setContentView(R.layout.activity_blank_activiy2);
+        ButterKnife.bind(this);
+        setSupportActionBar(toolbar);
         Log.v(TAG, "old");
 
         WVersionManager versionManager = new WVersionManager(this);
@@ -106,10 +105,6 @@ public class HomeActivity extends Activity {
 
         //Initiate shared preferences
         prefs = this.getSharedPreferences("com.savageorgiev.blockthis", Context.MODE_PRIVATE);
-        connectBtn = (View) findViewById(R.id.button3);
-        disconnectBtn = (View) findViewById(R.id.button4);
-        textUnderBtn = (TextView) findViewById(R.id.textView5);
-        textConnectedBtn = (TextView) findViewById(R.id.textView6);
 
         vpnStatusReceiver = new VpnStatusReceiver() {
             // this code is call asyncrously from the receiver
@@ -135,7 +130,7 @@ public class HomeActivity extends Activity {
         }
     }
 
-    public void donate(View v){
+    public void donate(View v) {
         Answers.getInstance().logCustom(new CustomEvent("Want to help"));
 
         Intent intent = new Intent(this, DonateActivity.class);
@@ -158,9 +153,7 @@ public class HomeActivity extends Activity {
         textConnectedBtn.setVisibility(View.GONE);
     }
 
-
     public void handleSwitch() {
-        Switch mySwitch = (Switch) findViewById(R.id.switch1);
 
         int autoload = prefs.getInt("autoload", 0);
         if (autoload == 1) {
@@ -180,7 +173,6 @@ public class HomeActivity extends Activity {
                 } else {
                     prefs.edit().putInt("autoload", 0).apply();
                 }
-
             }
         });
     }
@@ -193,6 +185,13 @@ public class HomeActivity extends Activity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_about: btnHelp();
+        }
+        return true;
+    }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -209,7 +208,6 @@ public class HomeActivity extends Activity {
             Log.i(TAG, "NULL");
             onActivityResult(0, RESULT_OK, null);
         }
-
     }
 
     public void disconnect(View view) {
@@ -229,7 +227,6 @@ public class HomeActivity extends Activity {
         } else {
             super.onActivityResult(request, result, data);
         }
-
     }
 
 
@@ -264,7 +261,7 @@ public class HomeActivity extends Activity {
     }
 
 
-    public void btnHelp(View view){
+    public void btnHelp() {
         AlertDialog alertDialog = new AlertDialog.Builder(HomeActivity.this).create();
         alertDialog.setTitle("Tell us what you think!");
         alertDialog.setMessage("If you are having any issues or want to share an opinion, please email us at blockthisapp@gmail.com.");
