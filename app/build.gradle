@@ -1,49 +1,21 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
     repositories {
-        maven { url 'https://maven.fabric.io/public' }
+        jcenter()
     }
-
     dependencies {
-        classpath 'io.fabric.tools:gradle:1.+'
-    }
-}
-apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
+        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.google.gms:google-services:1.3.0-beta1'
 
-repositories {
-    maven { url 'https://maven.fabric.io/public' }
-}
 
-android {
-    signingConfigs {
-    	release {
-            //removed for checking into a public repo (github)
-	    }
-    }
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
-    defaultConfig {
-        applicationId "com.savageorgiev.blockthis"
-        minSdkVersion 14
-        targetSdkVersion 22
-        versionCode 102
-        versionName "2.1"
-        signingConfig signingConfigs.release
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-    productFlavors {
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.2.0'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.0@aar') {
-        transitive = true;
+allprojects {
+    repositories {
+        jcenter()
     }
 }
