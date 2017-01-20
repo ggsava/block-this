@@ -1,7 +1,7 @@
 Block This - a DNS based Ad Blocker for Android
 ==========================
 
-<img src="https://block-this.com/static/images/block-this-ad-blocker-logo-normal.png" align="right" />
+<img src="https://block-this.com/static/images/block-this-ad-blocker-logo-small.png" align="right" />
 
 
 Copyright (C) 2015-2017 Sava Georgiev. This program is free software.
@@ -26,16 +26,16 @@ To get the latest release of **Block This**, go to:
   https://block-this.com
 
 If you wish to run it locally you will have to create your own app/fabric.properties file containing the following:
-
-`apiSecret=YOUR_API_SECRET`
-`apiKey=YOUR_API_KEY`
-
+~~~
+apiSecret=YOUR_API_SECRET
+apiKey=YOUR_API_KEY
+~~~
 as well as your own app/src/main/assets/config.properties file with the following properties:
-
-`appNextApiKey=YOUR_APP_NEXT_API_KEY`
-`dns1=YOUR_DNS1_IP_ADDRESS`
-`dns2=YOUR_DNS2_IP_ADDRESS`
-
+~~~
+appNextApiKey=YOUR_APP_NEXT_API_KEY
+dns1=YOUR_DNS1_IP_ADDRESS
+dns2=YOUR_DNS2_IP_ADDRESS
+~~~
 #Community
 
 If you wish to join the conversation, please visit our official forums at:
