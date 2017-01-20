@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <resources>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="app_name">Block This!</string>
     <string name="action_settings">Settings</string>
@@ -15,7 +16,7 @@
     <string name="title_activity_blank_activiy">BlankActiviy</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="feel_freedom">and feel the freedom.</string>
+    <string name="feel_freedom">Start and feel the freedom.</string>
 
     <string name="feature_1_title">No Ads</string>
     <string name="feature_1_subtitle">Banners, video and audio ads.</string>
@@ -33,11 +34,18 @@
     <string name="title_activity_donate">DonateActivity</string>
 
     <string name="title">We need your support!</string>
-    <string name="paragraph1">If you share my vision and wish this app to remain free for everyone, please consider supporting it via one of the following methods.</string>
+    <string name="paragraph1" translatable="false">If you share my vision and wish this app to remain free for everyone, please consider supporting it via one of the following methods.</string>
     <string name="patrion">1. Become a patron.</string>
     <string name="paragraph2">The best way you can help, and get rewards doing so, is by becoming a patron.</string>
     <string name="donate_patrion">Become a Patron and get rewards.</string>
     <string name="paypal">2. Contribute via PayPal</string>
     <string name="paragraph3">Alternatively, you can help by donating via PayPal.</string>
     <string name="donate_paypal">Donate via PayPal.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="install_games_helps">By installing any of those apps, you help Block This to remain free. Thank you.</string>
+    <string name="no_games_available">Sorry, there are no games available in your region. Please check again later.</string>
+
+    <string name="donate_page_subtitle">Block This is FREE and does\'t sell your personal data or show you ads.
+         The only way for me to pay the bills is by asking for your support here. If you wish to help out, here are some options. Thank you.</string>
 </resources>

@@ -1,0 +1,100 @@
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:fab="http://schemas.android.com/apk/android.support.design.widget"
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.savageorgiev.blockthis.vpn.VpnFragment"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/text_top_donation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:autoLink="web"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:linksClickable="true"
+            android:text="We need your support for this app to remain free. Please consider donating."
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="?colorPrimary"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/button_connect"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_play_arrow_white_48dp"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimary"
+            fab:fab_colorRipple="#eee"
+            app:fabSize="normal"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/button_disconnect"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="18dp"
+            android:src="@drawable/ic_stop_white_48dp"
+            android:onClick="disconnect"
+            android:visibility="gone"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimary"
+            fab:fab_colorRipple="#eee"
+            app:fabSize="normal"/>
+
+        <TextView
+            android:id="@+id/text_button_connected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_connect"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/feel_freedom"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_button_disconnected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_disconnect"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Ad blocking enabled. Enjoy."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/text_btm1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:autoLink="web"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:linksClickable="true"
+            android:text="Powered by block-this.com"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColorLink="?colorPrimary"/>
+
+    </RelativeLayout>
