@@ -25,4 +25,8 @@
         <item>@color/yellow</item>
         <item>@color/white</item>
     </integer-array>
-</resources> 
+
+    <color name="colorPrimary">#c55b5b</color>
+    <color name="colorPrimaryDark">#9D4747</color>
+    <color name="colorAccent">#77b3d4</color>
+</resources>

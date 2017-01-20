@@ -14,21 +14,17 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
 }
 
+
 android {
-    signingConfigs {
-    	release {
-            //removed for checking into a public repo (github)
-	    }
-    }
-    compileSdkVersion 22
-    buildToolsVersion '22.0.1'
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
     defaultConfig {
         applicationId "com.savageorgiev.blockthis"
-        minSdkVersion 14
-        targetSdkVersion 22
-        versionCode 102
-        versionName "2.1"
-        signingConfig signingConfigs.release
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 112
+        versionName "3.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -36,14 +32,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    productFlavors {
-    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.2.0'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.0@aar') {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.jakewharton:butterknife:8.1.0'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile('com.crashlytics.sdk.android:answers:1.3.10@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
         transitive = true;
     }
 }

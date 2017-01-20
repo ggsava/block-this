@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/side_nav_bar"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_marginTop="-10dp"
+            android:layout_height="100dp"
+            android:scaleType="fitStart"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/imageView" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Block This - FREE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_toRightOf="@+id/imageView"
+            android:id="@+id/title_page"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free, Fair and Private"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView"
+            android:layout_below="@id/title_page"
+            android:layout_toRightOf="@+id/imageView"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="16dp"
+        android:layout_below="@+id/header_container"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genral Info"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/red"
+            android:layout_below="@id/header_container"/>
+
+        <TextView
+            android:id="@+id/descr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For general information about how the app works, please check out block-this.com"
+            android:layout_below="@id/title1"
+            android:autoLink="all"
+            android:textColorLink="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forum"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/red"
+            android:layout_below="@id/header_container"/>
+
+        <TextView
+            android:id="@+id/descr2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For problems or techincal questions you can join our community at forum.block-this.com"
+            android:layout_below="@id/title1"
+            android:autoLink="all"
+            android:textColorLink="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/title4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/red"
+            android:layout_below="@id/header_container"/>
+
+        <TextView
+            android:id="@+id/descr4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If you have further questions or wish to chat with me, you can e-mail me at blockthisapp@gmail.com"
+            android:layout_below="@id/title1"
+            android:autoLink="all"
+            android:textColorLink="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/title5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/red"
+            android:layout_below="@id/header_container"/>
+
+        <TextView
+            android:id="@+id/descr5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My name is Sava Georgiev and I'm the developer behind this app. If you wish to know more about me you can check my website - savageorgiev.com or my twitter twitter.com/ggsava"
+            android:layout_below="@id/title1"
+            android:autoLink="all"
+            android:textColorLink="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/title3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Updates"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/red"
+            android:layout_below="@id/header_container"/>
+
+        <TextView
+            android:id="@+id/descr3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whenever there is an update you will automatically receive a notification, letting you know how to install the new version."
+            android:layout_below="@id/title1"
+            android:autoLink="all"
+            android:textColorLink="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/title6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open Source"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/red"
+            android:layout_below="@id/header_container"/>
+
+        <TextView
+            android:id="@+id/descr6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Block This is an Open Source project. If you are a developer and want to help by developing new features, check out my github repository at github.com/ggsava/block-this"
+            android:layout_below="@id/title1"
+            android:autoLink="all"
+            android:textColorLink="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+</RelativeLayout>
+
+</ScrollView>

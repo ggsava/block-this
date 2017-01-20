@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/android.support.design.widget"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/no_whitelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The white list allows you to exclude applications from Block This VPN. Tap the button below to get started. Remember to always restart Block-This VPN for the changes to take effect."
+        android:padding="12dp"
+        android:textColorLink="@color/colorPrimary"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/button_add"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_add_black_48dp"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimary"
+        fab:fab_colorRipple="#eee"
+        app:fabSize="normal"/>
+
+</RelativeLayout>

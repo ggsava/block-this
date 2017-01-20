@@ -2,40 +2,50 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.savageorgiev.blockthis">
 
-    <uses-sdk android:minSdkVersion="14" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppBaseTheme">
-        <activity android:name=".HomeActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".TeaserActivity">
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- Activities -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".vpn.AutoLaunchActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- Services -->
         <service
-            android:name=".MainVpnService"
+            android:name=".vpn.MainVpnService"
             android:permission="android.permission.BIND_VPN_SERVICE">
             <intent-filter>
                 <action android:name="android.net.VpnService" />
             </intent-filter>
         </service>
 
-        <!-- Install tracking -->
+        <!-- Receivers -->
         <receiver
             android:name=".receivers.BootUpReceiver"
             android:enabled="true"
@@ -45,21 +55,6 @@
             </intent-filter>
         </receiver>
 
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="1102623a40003d03b0827fa25da173b23484d2fa" />
-
-        <activity
-            android:name=".AutoLaunchActivity"
-            android:label="Block This! Autostarted"
-            android:theme="@style/Theme.Transparent">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".DonateActivity"
-            android:label="@string/title_activity_donate"></activity>
     </application>
 
 </manifest>

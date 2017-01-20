@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_whitelist"
+            android:icon="@drawable/ic_library_books_black_24dp"
+            android:title="Whitelist" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_games"
+            android:icon="@drawable/ic_android_play_24dp"
+            android:title="Games" />
+        <item
+            android:id="@+id/nav_donate"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Support me" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share"
+                android:actionProviderClass=
+                    "android.widget.ShareActionProvider"
+                />
+        </menu>
+    </item>
+
+</menu>

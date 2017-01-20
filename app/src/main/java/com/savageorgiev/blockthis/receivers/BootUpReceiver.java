@@ -4,16 +4,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.VpnService;
-import android.util.Log;
 
-import com.savageorgiev.blockthis.AutoLaunchActivity;
-import com.savageorgiev.blockthis.HomeActivity;
-import com.savageorgiev.blockthis.MainVpnService;
+import com.savageorgiev.blockthis.vpn.AutoLaunchActivity;
 
-/**
- * Created by Y0yOy0 on 7/8/2015.
- */
 
 public class BootUpReceiver extends BroadcastReceiver {
 
@@ -21,7 +14,7 @@ public class BootUpReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        // TODO Auto-generated method stub
+
         if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)){
             prefs = context.getSharedPreferences("com.savageorgiev.blockthis", Context.MODE_PRIVATE);
 
