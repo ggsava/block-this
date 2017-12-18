@@ -25,17 +25,21 @@ To get the latest release of **Block This**, go to:
 
   https://block-this.com
 
-If you wish to run it locally you will have to create your own app/fabric.properties file containing the following:
+The main logic that blocks the host names is contained within your own DNS server. You can setup one using PDNS (https://www.powerdns.com/). Once this is done, add the following in your app/src/main/assets/config.properties file:
 ~~~
-apiSecret=YOUR_API_SECRET
-apiKey=YOUR_API_KEY
-~~~
-as well as your own app/src/main/assets/config.properties file with the following properties:
-~~~
-appNextApiKey=YOUR_APP_NEXT_API_KEY
 dns1=YOUR_DNS1_IP_ADDRESS
 dns2=YOUR_DNS2_IP_ADDRESS
 ~~~
+If you wish to run it locally and want to use fabric (https://fabric.io/) for issue tracking you will have to create your own app/fabric.properties file containing the following (optional):
+~~~
+apiSecret=YOUR_FABRIC_API_SECRET
+apiKey=YOUR_FABRIC_API_KEY
+~~~
+In order for "Games" support section from the menu to work you can register with AppNext (https://www.appnext.com) and get an Api Key. Once this is done, add it to your app/src/main/assets/config.properties file (optional):
+~~~
+appNextApiKey=YOUR_APP_NEXT_API_KEY
+~~~
+
 # Community
 
 If you wish to join the conversation, please visit our official forums at:
