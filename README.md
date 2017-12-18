@@ -25,7 +25,8 @@ To get the latest release of **Block This**, go to:
 
   https://block-this.com
 
-The main logic that blocks the host names is contained within your own DNS server. You can setup one using PDNS (https://www.powerdns.com/). Once this is done, add the following in your app/src/main/assets/config.properties file:
+The main logic that blocks the host names is contained within your own DNS server. You can setup one using PDNS (https://www.powerdns.com/). Once this is done, add the following in your app/src/main/assets/config.properties file.
+For testing the app you can use any valid DNS address (e.g. 8.8.8.8, 8.8.4.4) but ofcourse using a public DNS will not block any ads.
 ~~~
 dns1=YOUR_DNS1_IP_ADDRESS
 dns2=YOUR_DNS2_IP_ADDRESS
