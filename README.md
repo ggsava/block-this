@@ -1,10 +1,9 @@
-Block This - a DNS based Ad Blocker for Android
-==========================
-
 # IMPORTANT: THIS PROJECT HAS BEEN DISCONTINUED. BE MINDFUL OF SCAMMERS. SCAMMERS HAVE ASSUMED ACCESS OVER THE DOMAINS: https://www.block-this.com/ and https://savageorgiev.com/ (my personal site).
 ## After discontinuing the project, scammers have taken hold of my old domain names and are pretending to be myself. I have filed complaints with domain registrars, hosters and the law enforcement, but in the meanwhile be careful!
- 
 
+ 
+Block This - a DNS based Ad Blocker for Android
+==========================
 <img src="https://block-this.com/static/images/block-this-ad-blocker-logo-small.png" align="right" />
 
 
