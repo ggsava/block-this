@@ -1,0 +1,51 @@
+<resources>
+
+    <string name="navigation_drawer_open">Öppna navigationsmenyn</string>
+    <string name="navigation_drawer_close">Stäng Öppna navigationsmenyn</string>
+
+    <string name="app_name">Blockera detta!</string>
+    <string name="action_settings">Inställningar</string>
+
+    <string name="like_this_app">Gillar du appen?</string>
+    <string name="home_button_rate">Betygsätt appen!</string>
+    <string name="home_button_continue">Häftigt, då sätter vi i gång.</string>
+    <string name="home_give_back">Nu ger du bara vad det är värt för dig.</string>
+    <string name="powered_by">Powered by block-this.com</string>
+
+    <string name="additional_info"></string>
+    <string name="title_activity_blank_activiy">BlankActiviy</string>
+
+    <string name="hello_world">Hej världen!</string>
+    <string name="feel_freedom">Starta och känn friheten.</string>
+
+    <string name="feature_1_title">Ingen reklam</string>
+    <string name="feature_1_subtitle">Banners, video- och ljudannonser.</string>
+    <string name="feature_2_title">Ingen spårning</string>
+    <string name="feature_2_subtitle">Blockera spårningscookies.</string>
+    <string name="feature_3_title">Snabbare surfning</string>
+    <string name="feature_3_subtitle">30% mindre datakonsumtion.</string>
+    <string name="feature_5_title">Antivirusskydd</string>
+    <string name="feature_5_subtitle">Blockera malware- och virusnerladdningar.</string>
+    <string name="feature_4_title">Automatisk start</string>
+    <string name="feature_4_subtitle">Automatisk start vid uppstart.</string>
+    <string name="feature_6_title">Batterilivslängd</string>
+    <string name="feature_6_subtitle">Ökar batterilivslängden.</string>
+    <string name="title_activity_auto_launch">AutoLaunchActivity</string>
+    <string name="title_activity_donate">DonateActivity</string>
+
+    <string name="title">Vi behöver ditt stöd!</string>
+    <string name="paragraph1" translatable="false">If you share my vision and wish this app to remain free for everyone, please consider supporting it via one of the following methods.</string>
+    <string name="patrion">1. Become a patron.</string>
+    <string name="paragraph2">The best way you can help, and get rewards doing so, is by becoming a patron.</string>
+    <string name="donate_patrion">Become a Patron and get rewards.</string>
+    <string name="paypal">2. Contribute via PayPal</string>
+    <string name="paragraph3">Alternatively, you can help by donating via PayPal.</string>
+    <string name="donate_paypal">Donate via PayPal.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="install_games_helps">Genom att installera någon av dessa appar, hjälper du till att hålla Block This kostnadsfri. Tack så mycket!</string>
+    <string name="no_games_available">Tyvärr, det finns inga spel tillgängliga i din region. Försök igen senare.</string>
+
+    <string name="donate_page_subtitle">Block This är KOSTNADSFRI och säljer inte dina personuppgifter eller visar reklam.
+         Enda sättet för mig att betala mina räkningar är genom att be om ditt stöd här. Om du vill hjälpa till har du här är några alternativ. Tack så mycket!</string>
+</resources>
